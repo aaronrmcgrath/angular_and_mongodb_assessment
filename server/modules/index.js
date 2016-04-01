@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var db = require('./db.js');
 var Heroes = require('../models/heroes.js');
 
 // DB STUFF
@@ -34,6 +35,11 @@ router.post('/heroes', function(request, response){
 
     response.send(data);
   });
+});
+
+
+router.delete('/heroes', function(request, response){
+  Heroes.findOne({ _id: request.body._id }).remove();
 });
 
 

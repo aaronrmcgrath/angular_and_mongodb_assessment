@@ -1,9 +1,12 @@
 <div ng-repeat="hero in heroesArray.data">
-  <p>
-    {{ hero.alias }}
-    {{ hero.first_name }}
-    {{ hero.last_name }}
-    {{ hero.city }}
-    {{ hero.power_name }}
-  </p>
+  <div>
+    <p>
+      {{ hero.alias }}
+      {{ hero.first_name }}
+      {{ hero.last_name }}
+      {{ hero.city }}
+      {{ hero.power_name }}
+    </p>
+    <button ng-click="heroID(hero)">Remove Hero</button>
+  </div>
 </div>

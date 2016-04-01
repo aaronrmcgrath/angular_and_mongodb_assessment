@@ -28,10 +28,18 @@ myApp.factory('HeroService', ['$http', function($http){
   };
 
 
+  var deleteHero = function(data) {
+    $http.delete('/heroes', data).then(function(response){
+      console.log('REMOVED HERO: ', response.data);
+    });
+  };
+
+
   return {
     postHero: postHero,
     getHeroes: getHeroes,
     heroes: heroes,
+    deleteHero: deleteHero,
     initCall: initCall
   }
 

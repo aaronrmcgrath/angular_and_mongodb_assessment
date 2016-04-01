@@ -14,6 +14,11 @@ myApp.controller('ViewHeroController', ['$scope', 'HeroService', function($scope
   $scope.heroesArray = heroService.heroes;
   console.log('heroesArray ===>: ', $scope.heroesArray);
 
+  $scope.heroID = function(object) {
+    console.log(object._id);
+    heroService.deleteHero(object._id);
+  };
+
 }]);
 
 
