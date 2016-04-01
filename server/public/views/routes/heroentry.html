@@ -4,5 +4,23 @@
     <label>Hero</label>
     <input ng-model="heroObject.alias" type="text" />
 
+    <label>First Name</label>
+    <input ng-model="heroObject.first_name" type="text" />
+
+    <label>Last Name</label>
+    <input ng-model="heroObject.last_name" type="text" />
+
+    <label>City</label>
+    <input ng-model="heroObject.city" type="text" />
+
+    <label>Power</label>
+    <select ng-model="heroObject.power_name" type="text">
+      <option ng-repeat="power in powerArray">
+        {{ power }}
+      </option>
+    </select>
+
+    <input type="submit" />
+
   </form>
 </div>

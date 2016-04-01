@@ -1,7 +1,10 @@
 
 
 myApp.controller('ViewHeroController', ['$scope', 'HeroService', function($scope, HeroService){
+
   var heroService = HeroService;
+
+  console.log('View working!');
 
   heroService.initCall();
 
@@ -18,7 +21,7 @@ myApp.controller('AddHeroController', ['$scope', 'HeroService', function($scope,
   var heroObject = {};
   var heroService = HeroService;
 
-  $scope.powerArray = ['Invisibility', 'Flight'];
+  $scope.powerArray = ['Invisibility', 'Flight', 'Super Speed', 'Heat Vision', 'Super Strength', 'Accelerated Healing', 'Power Blast', 'Animal Affinity'];
 
   $scope.submit = function(data) {
     heroService.postHero(data);
